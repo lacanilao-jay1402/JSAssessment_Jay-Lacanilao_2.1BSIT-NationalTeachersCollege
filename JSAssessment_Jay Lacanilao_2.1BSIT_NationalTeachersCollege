@@ -1,0 +1,37 @@
+const NFTs = [
+    {
+        name: "Movie",
+        title: "The First Slamdunk",
+        genre: "Action and Comedy",
+        year: "2023"
+
+
+    }
+];
+
+function mintNFT(nft) {
+    NFTs.push(nft);
+    return nft;
+}
+
+function listNFTs() {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log(NFTs[i]);
+    }
+    console.log("---------------------");
+}
+
+function getTotalSupply() {
+    console.log("Total Supply: " + NFTs.length);
+    console.log("----------------------");
+}
+
+listNFTs();
+
+mintNFT({name: "Movie", title: "The Avengers", genre: "Science Fiction", year: "2018"});
+mintNFT({name: "Movie", title: "The Elemental", genre: "Adventure", year: "2023"});
+mintNFT({name: "Movie", title: "Avatar", genre: "Adventure", year: "2012"});
+mintNFT({name: "Movie", title: "Frozen", genre: "Adventure", year: "2014"});
+listNFTs();
+
+getTotalSupply();
